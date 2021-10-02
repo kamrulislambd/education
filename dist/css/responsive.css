@@ -31,7 +31,7 @@
     color: #f39c12;
   }
   .header .navbar .actives {
-    color: #f39c12;
+    color: #f39c12 !important;
   }
   .home h1 {
     font-size: 4rem;
