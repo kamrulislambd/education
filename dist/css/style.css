@@ -84,7 +84,7 @@ section {
   color: #666;
 }
 
-.header .navbar .active {
+.header .navbar .actives {
   color: #666;
 }
 
@@ -102,7 +102,7 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: url(/dist/images/home-bg.jpg) no-repeat;
+  background: url(../images/home-bg.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -270,23 +270,31 @@ section {
 /*Course Section CSS Ends*/
 /*Teacher Section CSS Starts*/
 .teacher {
-  background: url(/dist/images/teachers.jfif) no-repeat;
+  background: url(../images/teachers.jfif) no-repeat;
   background-position: bottom;
   min-height: 65vh;
   text-align: center;
   padding-bottom: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-.teacher p {
-  font-size: 1.5rem;
-  color: #666;
-  line-height: 1.6;
-  width: 70rem;
+.teacher .teacher-content {
+  max-width: 70rem;
   margin: 1rem auto;
   text-align: center;
 }
 
-.teacher .btn {
+.teacher .teacher-content p {
+  font-size: 1.5rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.teacher .teacher-content .btn {
   display: inline-block;
   padding: .8rem 3rem;
   border: 0.2rem solid rgba(0, 0, 0, 0.1);
@@ -456,19 +464,19 @@ section {
   .header #menu {
     display: block;
   }
-  .header #menu .fa-times {
+  .header #menu.fa-times {
     transform: rotate(180deg);
   }
   .header .navbar {
-    position: fixed;
-    width: 100%;
-    top: -120%;
+    position: absolute;
+    top: 99%;
     left: 0;
-    background-color: #444;
-    padding: 2rem 0;
+    right: 0;
+    background: #2C3A47;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   .header .navbar.active {
-    top: 7rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
   .header .navbar a {
     display: block;

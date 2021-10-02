@@ -7,19 +7,19 @@
   .header #menu {
     display: block;
   }
-  .header #menu .fa-times {
+  .header #menu.fa-times {
     transform: rotate(180deg);
   }
   .header .navbar {
-    position: fixed;
-    width: 100%;
-    top: -120%;
+    position: absolute;
+    top: 99%;
     left: 0;
-    background-color: #444;
-    padding: 2rem 0;
+    right: 0;
+    background: #2C3A47;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   .header .navbar.active {
-    top: 7rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
   .header .navbar a {
     display: block;
@@ -30,7 +30,7 @@
   .header .navbar a:hover {
     color: #f39c12;
   }
-  .header .navbar .active {
+  .header .navbar .actives {
     color: #f39c12;
   }
   .home h1 {

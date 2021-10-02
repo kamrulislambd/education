@@ -12,19 +12,18 @@
     .header{
         & #menu{
             display: block;
-            & .fa-times{
+            &.fa-times{
                 transform: rotate(180deg);
             }
         }
         & .navbar{
-            position: fixed;
-            width: 100%;
-            top: -120%;
-            left: 0;
-            background-color: #444;
-            padding: 2rem 0;
+            position: absolute;
+            top: 99%;
+            left: 0; right: 0;
+            background: #2C3A47;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             &.active{
-                top: 7rem;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
             }
             & a{
                 display: block;

@@ -82,7 +82,7 @@ $border: .1rem solid rgba(0, 0, 0, 0.1);
                 color: #666;
             }
         }
-        & .active{
+        & .actives{
             color: #666;
         }
     }
@@ -100,7 +100,7 @@ $border: .1rem solid rgba(0, 0, 0, 0.1);
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: url(/dist/images/home-bg.jpg) no-repeat;
+    background: url(../images/home-bg.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -243,27 +243,35 @@ $border: .1rem solid rgba(0, 0, 0, 0.1);
 /*Course Section CSS Ends*/ 
 /*Teacher Section CSS Starts*/ 
 .teacher{
-    background: url(/dist/images/teachers.jfif) no-repeat;
+    background: url(../images/teachers.jfif) no-repeat;
     background-position: bottom;
     min-height: 65vh;
     text-align: center;
-    padding-bottom: 50rem;;
-    & p{
-        font-size: 1.5rem;
-        color: #666;
-        line-height: 1.6;
-        width: 70rem;
+    padding-bottom: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    & .teacher-content{
+        max-width: 70rem;
         margin: 1rem auto;;
         text-align: center;
+        & p{
+            font-size: 1.5rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        & .btn{
+            @include btn;
+            border-radius: 5rem;
+            font-size: 1.7rem;
+            background: $gradient;
+            color: #fff;
+            margin: 2rem 0;
+        }
     }
-    & .btn{
-        @include btn;
-        border-radius: 5rem;
-        font-size: 1.7rem;
-        background: $gradient;
-        color: #fff;
-        margin: 2rem 0;
-    }
+    
 }
 /*Teacher Section CSS Ends*/ 
 /*Contact Section CSS Starts*/ 
