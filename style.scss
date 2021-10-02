@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/*Common CSS*/
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    scroll-behavior: smooth;
+    object-fit: cover;
+    transition: all .2s linear;
+}
+::selection{
+    color: #f39c12;
+}
+@mixin btn{
+    display: inline-block;
+    padding: .8rem 3rem;
+    border: .2rem solid rgba(0, 0, 0, 0.1);
+    font-size: 1.7rem;
+    border-radius: .5rem;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+}
+html::-webkit-scrollbar{ width: 1rem;}
+html::-webkit-scrollbar-track{ background-color: #333;}
+html::-webkit-slider-thumb{ background: linear-gradient(#f1c40f, #f39c12);}
+section{
+    padding: 2rem 9%;
+}
+/*Custom CSS Starts*/ 
+
+$orange: #f39c12;
+$gradient: linear-gradient(90deg, #f1c40f, #f39c12);
+$box-shadow: 0 .1rem .3rem rgba(0, 0, 0, 0.3);
+$border: .1rem solid rgba(0, 0, 0, 0.1);
+
+.heading{
+    font-size: 4rem;
+    color: #666;
+    text-align: center;
+    padding: 2rem 0;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+    background: $gradient;
+    box-shadow: $box-shadow;
+    position: fixed;
+    width: 100%;
+    top: 0; left: 0;
+    z-index: 1000;
+
+    & #menu{
+        font-size: 3rem;
+        color: #fff;
+        cursor: pointer;
+        display: none;
+    }
+    & .logo{
+        & img{
+            width: 200px;
+        }
+    }
+    & .navbar{
+
+        & a{
+            display: inline-block;
+            font-size: 1.9rem;
+            color: #fff;
+            margin: 0 1rem;
+            &:hover{
+                color: #666;
+            }
+        }
+        & .active{
+            color: #666;
+        }
+    }
+    & .login{
+        font-size: 3rem;
+        color: #fff;
+        &:hover{
+            color: #666;
+        }
+    }
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(/dist/images/home-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    text-align: center;
+    & h1{
+        font-size: 6rem;
+        color: #666;
+        padding-bottom: 3.5rem;
+    }
+    & p{
+        font-size: 1.8rem;
+        color: #666;
+        width: 70rem;
+        line-height: 1.8;
+    }
+    & .btn{
+        @include btn;
+        margin-top: 4rem;
+        background: $gradient;
+        border-radius: 5rem;
+        color: #fff;
+        &:hover{
+            background: #f39c12;
+        }
+    }
+}
+/*Home Section CSS Ends*/
+/*About Section CSS Starts*/ 
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    & .about-image{
+        flex: 1 1 40rem;
+
+        & img{
+            width: 100%;
+        }
+    }
+    & .about-content{
+        flex: 1 1 40rem;
+        padding: 0 2rem;
+        & h2{
+            font-size: 5rem;
+            color: #333;
+            line-height: 1.8;
+        }
+        & p{
+            font-size: 1.7rem;
+            color: #666;
+            line-height: 1.7;
+        }
+        & .btn{
+            @include btn;
+            border-radius: 5rem;
+            background: $gradient;
+            color: #fff;
+            margin-top: 3rem;
+            &:hover{
+                background: #f39c12;
+            }
+        }
+    }
+} 
+/*About Section CSS Ends*/  
+/*Course Section CSS starts*/ 
+
+.course{
+    
+    & .box-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        & .box{
+            width: 37rem;
+            margin: 1.5rem;
+            border: $border;
+            position: relative;
+            & img{
+                width: 100%;
+                height: 20rem;
+            }
+            & .price{
+                position: absolute;
+                top: 16rem;
+                right: 2rem;
+                height: 8rem;
+                width: 8rem;
+                line-height: 8rem;
+                text-align: center;
+                border-radius: 50%;
+                font-size: 2.5rem;
+                color: #fff;
+                background: $gradient;
+            }
+            & .box-content{
+                padding: 1rem;
+                & .stars{
+                    color: #f39c0f;
+                    font-size: 1.7rem;
+                    padding: 1rem .1rem;
+                }
+                & h2{
+                    font-size: 2.3rem;
+                    color: #666;
+                    font-weight: 400;
+                    padding-bottom: 1rem;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                & p{
+                    font-size: 1.5rem;
+                    color: #444;
+                    margin: 1rem 0;
+                }
+                & .info{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 1.5rem;
+                    color: #666;
+                    border-top: .1rem solid rgba(0, 0, 0, 0.3);
+                    padding: 2rem 0;
+                    & i{
+                        color: #f39c12;
+                        margin: 0 .5rem;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+/*Course Section CSS Ends*/ 
+/*Teacher Section CSS Starts*/ 
+.teacher{
+    background: url(/dist/images/teachers.jfif) no-repeat;
+    background-position: bottom;
+    min-height: 65vh;
+    text-align: center;
+    padding-bottom: 50rem;;
+    & p{
+        font-size: 1.5rem;
+        color: #666;
+        line-height: 1.6;
+        width: 70rem;
+        margin: 1rem auto;;
+        text-align: center;
+    }
+    & .btn{
+        @include btn;
+        border-radius: 5rem;
+        font-size: 1.7rem;
+        background: $gradient;
+        color: #fff;
+        margin: 2rem 0;
+    }
+}
+/*Teacher Section CSS Ends*/ 
+/*Contact Section CSS Starts*/ 
+
+    .contact{
+        background-color: #111;
+        text-align: center;
+        & .heading{
+            color: #fff;
+        }
+        & .row{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+            & form{
+                flex: 1 1 60rem;
+                background-color: #222;
+                padding: 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 5rem;
+                & .box{
+                    width: 49%;
+                    height: 5rem;
+                    margin: 1rem 0;
+                    padding: 0 1rem;
+                    background: none;
+                    border: .1rem solid #eee;
+                    font-size: 1.7rem;
+                    color: #fff;
+                    text-transform: none;
+                    &::placeholder{
+                        text-transform: capitalize;
+                    }
+                    &:focus{
+                        border-color: #f39c12;
+                    }
+                }
+                & .btn{
+                    @include btn;
+                    background: $gradient;
+                    margin: 1rem 0;
+                    padding: .8rem 4rem;
+                    color: #fff;
+                    &:hover{
+                        background: #fff;
+                        color: #333;
+                    }
+                }
+                & .address{
+                    width: 100%;
+                    height: 15rem;
+                    resize: none;
+                    padding: 1rem;
+                }
+            }
+        }
+        & .contact-image{
+            flex: 1 1   40rem;
+            & img{
+                height: 80vh;
+                margin-top: 2rem;
+            }
+        }
+    }
+
+/*Contact Section CSS Ends*/ 
+/*Footer Section CSS Starts*/ 
+
+.footer{
+    padding: 2rem 9%;
+    background: #333;
+    & .footer-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+        gap: 1.5rem;
+
+        & .box{
+           flex: 1 1 25rem;
+           margin: 1.5rem;
+            & h2{
+                font-size: 3rem;
+                color: #fff;
+            }
+            & a{
+                color: #fff;
+                font-size: 1.89em;
+                display: block;
+                margin: 1rem 0;
+                &:hover{
+                    color:#f39c12;
+                }
+            }
+            & p{
+                display: block;
+                font-size: 1.9rem;
+                color: #fff;
+                margin: 1rem 0;
+                & i{
+                    color: #f39c12;
+                    margin-right: .8rem;
+                }
+            }
+        }
+
+    }
+    & .author{
+        text-align: center;
+        padding: 1rem 0;
+        border-top: $border;
+        margin-top: 5rem;
+        & p{
+            font-size: 2rem;
+            color: #fff;
+            & a{
+                color:#f39c12;
+            }
+        }
+    }
+}
+
+/*Footer Section CSS Ends*/ 
+
+
+
+
+
+
+
+
+/*Media Query Files*/ 
+@import 'responsive';

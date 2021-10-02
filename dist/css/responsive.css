@@ -1,0 +1,59 @@
+/*Large Device*/
+/*Medium Device*/
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+  .header #menu {
+    display: block;
+  }
+  .header #menu .fa-times {
+    transform: rotate(180deg);
+  }
+  .header .navbar {
+    position: fixed;
+    width: 100%;
+    top: -120%;
+    left: 0;
+    background-color: #444;
+    padding: 2rem 0;
+  }
+  .header .navbar.active {
+    top: 7rem;
+  }
+  .header .navbar a {
+    display: block;
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: 2rem;
+  }
+  .header .navbar a:hover {
+    color: #f39c12;
+  }
+  .header .navbar .active {
+    color: #f39c12;
+  }
+  .home h1 {
+    font-size: 4rem;
+  }
+  .home p {
+    width: auto;
+  }
+  .contact .contact-image {
+    display: none;
+  }
+}
+
+/*Small Device*/
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .header .logo img {
+    width: 180px;
+  }
+  .contact .row form .box {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
