@@ -62,7 +62,7 @@ section {
   z-index: 1000;
 }
 
-.header #menu {
+.header #menu-btn {
   font-size: 3rem;
   color: #fff;
   cursor: pointer;

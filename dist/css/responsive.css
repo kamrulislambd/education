@@ -4,10 +4,10 @@
   html {
     font-size: 55%;
   }
-  .header #menu {
+  .header #menu-btn {
     display: block;
   }
-  .header #menu.fa-times {
+  .header #menu-btn.fa-times {
     transform: rotate(180deg);
   }
   .header .navbar {
@@ -30,7 +30,7 @@
   .header .navbar a:hover {
     color: #f39c12;
   }
-  .header .navbar .actives {
+  .header .navbar .active {
     color: #f39c12;
   }
   .home h1 {
